@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1 class="mt-3">{{ title }}</h1>
+            <h1 class="mt-3">{{ title }} <button @click="showTotal = !showTotal" class="float-right">{{ buttonText }}</button></h1>
             <table class="mt-5 table" v-if="!showTotal">
                 <thead>
                 <tr>
@@ -91,6 +91,9 @@
 
                     return Object.values(salesByProduct);
                 },
+                buttonText(){
+                    return this.showTotal ? 'List Sales' : 'Show Totals'
+                }
             },
             methods: {
                 getSales(){
