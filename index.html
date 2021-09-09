@@ -24,7 +24,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr></tr>
+                    <tr v-for="sale in sales">
+                        <td>{{ sale.id }}</td>
+                        <td>{{ sale.name }}</td>
+                        <td>{{ sale.price }}</td>
+                        <td>{{ sale.qtde }}</td>
+                        <td>{{ sale.date }}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
